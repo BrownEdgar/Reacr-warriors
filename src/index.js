@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './Components/Georgi/App';
+import App from './Components/Edgar/Form';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App data="abcd"/>
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
