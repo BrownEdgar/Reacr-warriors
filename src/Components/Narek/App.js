@@ -3,25 +3,24 @@ import './App.css';
 
 export default class App extends Component{
 state={
-  count:0,
-}
+  data:new Date().toLocaleTimeString()
 
-plus=()=>{
-	this.setState({ count: this.state.count + 1 })
 }
-minus=()=>{
-	this.setState({count:this.state.count - 1})
+start=()=>{
+setInterval(()=>{
+  this.setState({data:new Date().toLocaleTimeString()})
+},1000)
+   
 }
-clear=()=>{
-	this.setState({count: 0})
+stop=()=>{
+clearInterval()
 }
 render(){
   return (
     <div className='count'>
-     <h1>{this.state.count}</h1>
-     <button onClick={this.plus}>+</button>
-     <button onClick={this.minus}>-</button>
-     <button onClick={this.clear}>c</button>
+<h1>{this.state.data}</h1>
+<button onClick={this.start}>Start</button>
+<button onClick={this.stop}>Stop</button>
     </div>
   )
 }
