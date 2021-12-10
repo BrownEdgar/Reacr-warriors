@@ -1,31 +1,30 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import './App.css';
 
-export default class App extends Component{
-state={
-  data:new Date().toLocaleTimeString()
+export default class App extends Component {
+	state = {
+		data: null
 
-}
-
-start=(action)=>{
-	let interval = setInterval(() => {
-		this.setState({ data: new Date().toLocaleTimeString() })
-	}, 1000);
-	if(action === "stop"){
-		console.log("Sda");
-		clearInterval(interval)
 	}
-}
+	// Kodi uxxum 
+	start = () => {
+		let intervalId = setInterval(() => {
+			this.setState({ data: new Date().toLocaleTimeString() });
+		}, 1000)
+		this.setState({ intervalId: intervalId })
+	}
 
-render(){
-  return (
-    <div className='count'>
-		<h1>{this.state.data}</h1>
-		<button onClick={() => this.start()}>Start</button>
-		  <button onClick={() => this.start("stop")}>Stop</button>
-    </div>
-  )
-}
+	stop = () => clearInterval(this.state.intervalId);
+
+	render() {
+		return (
+			<div className='count'>
+				<h1>{this.state.data}</h1>
+				<button onClick={() => this.start()}>Start</button>
+				<button onClick={() => this.stop()}>Stop</button>
+			</div>
+		)
+	}
 }
 
 
