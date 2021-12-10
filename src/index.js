@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './Components/Edgar/Form';
+import App from './Components/Georgi/App';
 
 
 ReactDOM.render(

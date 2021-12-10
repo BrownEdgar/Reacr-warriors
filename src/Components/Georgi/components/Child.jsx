@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 
- function Child(props) {
-	 console.log(props.children)
-	return (
-		<div>
-			{props.children}
-		</div>
-	)
+export default class Child extends Component {
+	render() {
+		return (
+			<div>
+				<h1>Hello</h1>
+			</div>
+		)
+	}
 }
-export default Child
