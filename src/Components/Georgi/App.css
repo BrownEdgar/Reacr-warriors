@@ -1,27 +1,48 @@
-.App{
-	border: 1px solid black;
+.box{
+	width: 100%;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.countainer{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
-button{
-	width: 100px;
-	height: 50px;
-	background-color: rgb(159, 189, 60);
-	margin: 10px;
-	border: 6px double rgb(47, 22, 22);
-	font-size: 1.5em;
+	flex-direction: row;
+	justify-content: space-evenly;
 }
 
-.plus{
-	background-color: rgb(27, 90, 2);
+.flex{
+	position: relative;
+	border: 2px dotted black;
+	padding: 20px;
+	text-align: center;
+	border-radius: 20px 0px 20px 20px;
+	font-size: 1.2em;
+	background-color: rgb(241, 216, 183);
 }
-.minus{
-	background-color: rgb(90, 2, 2);
+
+.deleter{
+	position: absolute;
+	top: -10px;
+	right: -10px;
+}
+
+.clock{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content:space-evenly;
+	align-items: center;
+}
+
+.btns{
+	display: flex;
+	justify-content:space-evenly;
+	align-items: center;
+}
+
+button{
+	background-color: rgb(160, 107, 107);
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+.btn{
+	width: 100px;
+	height: 50px;
+	font-size: 1.5em;
 }
