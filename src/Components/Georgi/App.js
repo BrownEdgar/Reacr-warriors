@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import './App.css';
-import Users_id from "./components/Users_id"
+import Users_id from "./components/Users_id";
 import Watches from './components/Watches'; 
+import axios from 'axios';
 
 export default class App extends Component {
 	state = {
@@ -12,7 +13,8 @@ export default class App extends Component {
 			{id: 4, firstname: 'Jeck', age: 30, salery: 700_000},
 			{id: 5, firstname: 'Hulk', age: 30, salery: 2_000_000},
 		],
-              clock: new Date().toLocaleTimeString()
+            clock: new Date().toLocaleTimeString(),
+			data: [],
 	}
        StartRunning = (action) => {
              action = setInterval(() => {
