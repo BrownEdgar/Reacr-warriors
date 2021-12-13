@@ -8,8 +8,6 @@ export default class App extends Component {
 		title : []
 	}
 
-
-
 	getData = (id) => {
 		axios(`https://jsonplaceholder.typicode.com/todos/?_limit=${id}`)
 			.then(newData => {
@@ -26,6 +24,7 @@ export default class App extends Component {
 
 	}
 
+	
 	hendlerSubmit = (e) => {
 		e.preventDefault()
 		const value = e.target[0].value;
@@ -33,15 +32,24 @@ export default class App extends Component {
 	}
 
 	deleteId = (id) => {
-		axios.delete(`https://jsonplaceholder.typicode.com/todos/?_limit=${id}`)
-			.then(() => this.setState({ status: 'deleted successful'}))
+		let { data } = this.state;
+		data = data.filter(elem => elem.id !== id)
+		this.setState({ data })
 	}
 
 	deleteHendler = (e) => {
-		e.preventDefault()
-		let {title} = this.state
-		title = 
-		this.deleteId(value)
+		this.deleteId(2)
+		console.log("ok");
+	}
+	updateHendler = () => {
+		let { data } = this.state;
+		 data.forEach(elem => {
+			if (elem.id === 3) {
+				elem.title = "box"
+			}
+		})
+		this.setState({ data })
+	
 	}
 
 	render() {
@@ -52,9 +60,9 @@ export default class App extends Component {
 					<button>Get</button>
 				</form>
 				<pre>{JSON.stringify(this.state.data,null,1)}</pre>
-				<form onSubmit={this.deleteHendler}>
-					<button>Delete</button>
-				</form>
+				<button onClick={this.deleteHendler}>Delete</button>
+				<button onClick={this.updateHendler}>Update</button>
+				
 			</div>
 		)
 	}
