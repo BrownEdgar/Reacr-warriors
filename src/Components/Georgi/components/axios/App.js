@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import './App.css'
 
 
 export default class App extends Component {
 	state = {
 		data : [],
-		title : []
+		value: ""
 	}
 
-	getData = (id) => {
-		axios(`https://jsonplaceholder.typicode.com/todos/?_limit=${id}`)
+	getData = () => {
+		let { value } = this.state;
+		axios(`https://jsonplaceholder.typicode.com/todos/?_limit=${value}`)
 			.then(newData => {
 				this.setState({data : newData.data})
 				if(newData.status === 200){
@@ -24,44 +26,58 @@ export default class App extends Component {
 
 	}
 
-	
-	hendlerSubmit = (e) => {
-		e.preventDefault()
-		const value = e.target[0].value;
-		this.getData(value)
-	}
 
-	deleteId = (id) => {
-		let { data } = this.state;
-		data = data.filter(elem => elem.id !== id)
+	deleteId = () => {
+		let { data, value } = this.state;
+		data = data.filter(elem => elem.id !== +value)
 		this.setState({ data })
 	}
 
-	deleteHendler = (e) => {
-		this.deleteId(2)
-		console.log("ok");
-	}
-	updateHendler = () => {
-		let { data } = this.state;
-		 data.forEach(elem => {
-			if (elem.id === 3) {
-				elem.title = "box"
+
+	updateAndDelete = () => {
+		let { data, value } = this.state;
+		data = data.filter(elem => elem.id !== +value)
+
+		data.forEach(elem => {
+			if (elem.id === +value + 1) {
+				elem.title = "Update title"
 			}
 		})
 		this.setState({ data })
-	
+	}
+
+	updateHendler = () => {
+		let { data,value} = this.state;
+		 data.forEach(elem => {
+			 if (elem.id === +value) {
+				elem.title = "box"
+			}
+		})
+		this.setState({ data });
 	}
 
 	render() {
+		let { data, value } = this.state;
 		return (
-			<div>
+			<div className='container'>
+			
 				<form onSubmit={this.hendlerSubmit}>
-					<input type="number" placeholder='1-200' />
-					<button>Get</button>
+					<input 
+						type="number" 
+						placeholder='1-200' 
+						value={value} 
+						onChange={(e) => {this.setState({ value:e.target.value  })}}/>
 				</form>
-				<pre>{JSON.stringify(this.state.data,null,1)}</pre>
-				<button onClick={this.deleteHendler}>Delete</button>
-				<button onClick={this.updateHendler}>Update</button>
+
+
+				<div className="buttons-wrapper">
+					<button onClick={this.getData}>Get</button>
+					<button onClick={this.deleteId}>Delete</button>
+					<button onClick={this.updateHendler}>Update</button>
+					<button onClick={this.updateAndDelete}>Delete-Update</button>
+				</div>
+				<pre>{JSON.stringify(data, null, 1)}</pre>
+			
 				
 			</div>
 		)

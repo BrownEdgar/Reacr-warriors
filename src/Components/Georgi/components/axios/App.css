@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap');
+
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+}
+
+
+.container{
+	width: 50%;
+	margin: 50px auto;
+	border: 1px solid #f2f2f2;
+	color:#fff;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction: column;
+	padding: 1rem;
+	min-width: 400px;
+	
+}
+.container > * {
+	margin: 15px 0 ;
+}
+
+.buttons-wrapper{
+	display:flex;
+	align-items:center;
+	width: 90%;
+	
+}
+.buttons-wrapper button {
+	padding: 0.5rem 1rem;
+	font-weight: 700;
+	background-color: #fff;
+	border-radius: 10px;
+	margin-right: 20px;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+
+.buttons-wrapper button:nth-child(2) {
+	background-color: darkorange;
+	color: #40017a;
+}
+.buttons-wrapper button:nth-child(3) {
+	background-color: darkred;
+	color: #f2f2f2;
+}
+
+form{
+	padding: 0.5rem;
+	background-color: grey;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width: 50%;
+}
+form input  {
+	flex: 0 1 100%;
+	padding: 0.5rem 1rem;
+}
+.getData{
+	background-color: green;
+	color: #FFF;
+	font-weight: 700;
+	cursor: pointer;
+	border: none;
+	margin-left: 10px;
+}

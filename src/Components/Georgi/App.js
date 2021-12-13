@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css';
-import Users_id from "./components/Users_id";
+import UsersId from "./components/UsersId";
 import Watches from './components/Watches'; 
 import axios from 'axios';
 
@@ -14,13 +14,16 @@ export default class App extends Component {
 			{id: 5, firstname: 'Hulk', age: 30, salery: 2_000_000},
 		],
             clock: new Date().toLocaleTimeString(),
-			data: [],
+		
 	}
-       StartRunning = (action) => {
-             action = setInterval(() => {
-                    this.setState({ clock: new Date().toLocaleTimeString()})
-             }, 1000);
-       }
+	start = () => {
+		let intervalId = setInterval(() => {
+			this.setState({ clock: new Date().toLocaleTimeString() });
+		}, 1000)
+		this.setState({ intervalId: intervalId })
+	}
+
+	stop = () => clearInterval(this.state.intervalId);
 
        deleter = (id) => {
               let users = [...this.state.users];
@@ -30,10 +33,10 @@ export default class App extends Component {
 	   //Chkaraca nen anem vor kangni taymery.......
 	render(){
 		return(
-                     <div>
-                            <Users_id users={this.state.users} deleter={this.deleter} />
-                            <Watches clock={this.state.clock} StartRunning={this.StartRunning} />
-                     </div>
+        <div>
+				<UsersId users={this.state.users} deleter={this.deleter} />
+				<Watches clock={this.state.clock} start={this.start} stop={this.stop} />
+         </div>
 		)
 	}
 }

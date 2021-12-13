@@ -16,6 +16,8 @@ import RContext from './R_Context';
 
 export const MyContext = React.createContext("Default value");
 export const MyContext2 = React.createContext("Default value2");
+
+
 MyContext.displayName = 'MyDisplayName';
 class App extends Component {
     constructor(props) {
