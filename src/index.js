@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './Components/Edgar/ContextTets/App';
+import App from './Components/Narek/context/App';
 // import App from './Components/Georgi/components/axios/App'
 
 

@@ -6,7 +6,7 @@ export default class App extends Component {
 		data: null
 
 	}
-	// Kodi uxxum 
+	
 	start = () => {
 		let intervalId = setInterval(() => {
 			this.setState({ data: new Date().toLocaleTimeString() });

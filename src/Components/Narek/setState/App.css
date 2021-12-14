@@ -7,9 +7,9 @@ background-color: aliceblue;
 }
 .count button{
   margin:3px;
-  padding:8px;
+  padding:5px;
+  width: 28px;
  background-color: rgb(59, 71, 71);
  color: rgb(240, 231, 231);
  border: none;
- cursor: pointer;
 }
