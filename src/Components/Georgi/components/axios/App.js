@@ -1,84 +1,55 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 import './App.css'
 
 
 export default class App extends Component {
 	state = {
-		data : [],
-		value: ""
+		dishes : [
+			{id:1,name: 'Pasta', price: 2000},
+			{id: 2,name: 'Pizza', price: 3000},
+			{id: 3,name: 'Minestrone', price: 5000},
+			{id: 4,name: 'Ravioli', price: 7000},
+		],
+		ingredients : [
+			{ id: 1, name: 'Pasta', ingredients: "'Typical of Calabria, this recipe for paccheri al forno pulls together quickly and relies on the oven to do most of the work. Look for high-quality cherry tomatoes and fresh mozzarella, plus bronze-extruded, air-dried pasta, whose coarse texture will hold up to the sauce."},
+			{ id: 2, name: 'Pizza', ingredients: "For over 10 years, Alex and I have been studying the art of homemade artisan pizza. We’ve even taken a few trips to Italy to bring back secrets from Rome and Naples. Want to make the best homemade pizza "},
+			{ id: 3, name: 'Minestrone', ingredients: "For over 10 years, Alex and I have been studying the art of homemade artisan pizza. We’ve even taken a few trips to Italy to bring back secrets from Rome and Naples. Want to make the best homemade pizza "},
+			{ id: 4, name: 'Ravioli', ingredients: "For over 10 years, Alex and I have been studying the art of homemade artisan pizza. We’ve even taken a few trips to Italy to bring back secrets from Rome and Naples. Want to make the best homemade pizza "},
+		]
 	}
-
-	getData = () => {
-		let { value } = this.state;
-		axios(`https://jsonplaceholder.typicode.com/todos/?_limit=${value}`)
-			.then(newData => {
-				this.setState({data : newData.data})
-				if(newData.status === 200){
-					let { data } = this.state
-					data = [...data, ...newData]
-					this.setState({ data })
-				}
-			})
-			.catch(err => {
-				this.setState({error : "error"})
-			})
-
-	}
-
-
-	deleteId = () => {
-		let { data, value } = this.state;
-		data = data.filter(elem => elem.id !== +value)
-		this.setState({ data })
-	}
-
-
-	updateAndDelete = () => {
-		let { data, value } = this.state;
-		data = data.filter(elem => elem.id !== +value)
-
-		data.forEach(elem => {
-			if (elem.id === +value + 1) {
-				elem.title = "Update title"
-			}
-		})
-		this.setState({ data })
-	}
-
-	updateHendler = () => {
-		let { data,value} = this.state;
-		 data.forEach(elem => {
-			 if (elem.id === +value) {
-				elem.title = "box"
-			}
-		})
-		this.setState({ data });
-	}
-
-	render() {
-		let { data, value } = this.state;
+	getIngredients = () => {
+		let { ingredients} = this.state
 		return (
-			<div className='container'>
-			
-				<form onSubmit={this.hendlerSubmit}>
-					<input 
-						type="number" 
-						placeholder='1-200' 
-						value={value} 
-						onChange={(e) => {this.setState({ value:e.target.value  })}}/>
-				</form>
+			<div>
+				<h1>Ingredients</h1>
+				{ingredients.map(elem => {
+				return (
+					<div className='component-list'>
+						<p key={elem.id}>{elem.name} {elem.ingredients}</p>
+					</div>
+				)
+				})}
+			</div>
+		)
+	}
 
+	render(){
+		let {dishes} = this.state
+		return(
 
-				<div className="buttons-wrapper">
-					<button onClick={this.getData}>Get</button>
-					<button onClick={this.deleteId}>Delete</button>
-					<button onClick={this.updateHendler}>Update</button>
-					<button onClick={this.updateAndDelete}>Delete-Update</button>
+			<div className='menu'> 
+
+				<h1>Menu</h1>
+
+				<div className='image-box' onClick={this.getIngredients}>
+
+					{dishes.map(elem =>
+						
+						<div className='menu-list'>
+							<h1>{elem.name}<hr/> Price = {elem.price}</h1>
+						</div>)}
+
 				</div>
-				<pre>{JSON.stringify(data, null, 1)}</pre>
-			
-				
 			</div>
 		)
 	}

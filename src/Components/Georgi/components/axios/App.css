@@ -1,79 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,600;0,700;0,800;0,900;1,400&display=swap');
-
-*,
-*::before,
-*::after{
-	box-sizing: border-box;
-}
-
-
-body {
-	font-family: 'Montserrat', sans-serif;
-	background-color: #333;
-}
-
-
-.container{
+.menu{
 	width: 50%;
-	margin: 50px auto;
-	border: 1px solid #f2f2f2;
-	color:#fff;
-	display:flex;
-	justify-content:center;
-	align-items:center;
+	min-height: 300px;
+	border: 2px solid black;
+	display: flex;
+	justify-content:space-evenly;
 	flex-direction: column;
-	padding: 1rem;
-	min-width: 400px;
-	
-}
-.container > * {
-	margin: 15px 0 ;
+	align-items: center;
+	background-color: rgb(202, 54, 54);
+	border-radius: 20px 20px 0 0;
 }
 
-.buttons-wrapper{
-	display:flex;
-	align-items:center;
-	width: 90%;
-	
+.image-box{
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	min-height: 200px;
+	background-color: rgb(98, 0, 0);
 }
-.buttons-wrapper button {
-	padding: 0.5rem 1rem;
-	font-weight: 700;
-	background-color: #fff;
+
+.menu-list{
+	display: flex;
+	justify-content: space-evenly;
+	position: relative;
+	min-height: 200px;
+	min-width:200px;	
+	cursor: pointer;
+}
+
+.menu-list > h1{
+	position: absolute;
+	bottom: -10px;
+	left: 0px;
+	color: white;
+	font-size: 1.2rem;
+	color: rgb(229, 255, 0);
+	background-color: rgba(75, 75, 75, 0.657);
 	border-radius: 10px;
-	margin-right: 20px;
-	border: none;
+	padding: 10px;
 	cursor: pointer;
-	font-size: 16px;
 }
 
 
-.buttons-wrapper button:nth-child(2) {
-	background-color: darkorange;
-	color: #40017a;
-}
-.buttons-wrapper button:nth-child(3) {
-	background-color: darkred;
-	color: #f2f2f2;
+ .menu-list:nth-child(1) {
+	background-image: url('./images/Pasta.jpg');
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: cover;
 }
 
-form{
-	padding: 0.5rem;
-	background-color: grey;
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	width: 50%;
+ .menu-list:nth-child(2) {
+	background-image: url('./images/Pizza.jpg');
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: cover;
 }
-form input  {
-	flex: 0 1 100%;
-	padding: 0.5rem 1rem;
+
+ .menu-list:nth-child(3) {
+	background-image: url('./images/Minestrone.jpg');
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: cover;
 }
-.getData{
-	background-color: green;
-	color: #FFF;
-	font-weight: 700;
-	cursor: pointer;
-	border: none;
-	margin-left: 10px;
+
+ .menu-list:nth-child(4) {
+	background-image: url('./images/Ravioli.jpg');
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: cover;
+}
+
+.component-list{
+	border: 10px solod black;
+	background-color: rgb(255, 0, 0);
 }
