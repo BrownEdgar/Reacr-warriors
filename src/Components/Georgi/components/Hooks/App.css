@@ -1,0 +1,22 @@
+body{
+	background-color: rgb(189, 200, 163);
+}
+
+button{
+	margin: 5px;
+	background-color: rgb(253, 168, 40);
+	border: 4px double black;
+	transition: 0.3s;
+}
+
+button:hover{
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+	transition: 0.3s;
+}
+
+h1{
+	background-color: rgb(135, 143, 115);
+	text-align: center;
+	border-radius: 20px;
+	color: rgb(17, 47, 0);
+}
