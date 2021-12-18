@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './Components/Georgi/components/axios/App'
-import App from './Components/Georgi/components/Hooks/App'
+import App from './Components/Georgi/components/todo_list/App'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 

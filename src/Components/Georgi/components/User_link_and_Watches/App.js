@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css';
-import UsersId from "./components/UsersId";
-import Watches from './components/Watches'; 
+import UsersId from "./UsersId";
+import Watches from './Watches'; 
 import axios from 'axios';
 
 export default class App extends Component {
