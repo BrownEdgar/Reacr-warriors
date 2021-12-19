@@ -11,7 +11,10 @@ export default class Comp extends Component {
                 {this.state.three.map((elem,index)=><li key={index}>{elem}</li>)}
 
                 <Cont.Consumer>
-                  {value=><li>{value}</li>}
+                  {value=> {
+					  console.log(value);
+						return <li>{JSON.stringify(value)}</li>
+				  }}
                 </Cont.Consumer>
            
 
