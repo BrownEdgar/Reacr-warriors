@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './Components/Narek/useState/App'
+import App from './Components/Narek/todo/App'
 
 
 ReactDOM.render(

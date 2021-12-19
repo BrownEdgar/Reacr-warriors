@@ -19,7 +19,7 @@ export default class App extends Component {
         <h1>Шаурма:</h1>
          {two.map((elem,index)=><li key={index}>{elem}</li>)}
 
-         <Cont.Provider value={one}/>
+         <Cont.Provider value={one}>
                    <Comp/>
                 <Cont.Provider/>
 
