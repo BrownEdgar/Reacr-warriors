@@ -19,9 +19,15 @@ export default class App extends Component {
 				<h1>Шаурма:</h1>
 				{two.map((elem, index) => <li key={index}>{elem}</li>)}
 
+<<<<<<< HEAD
+         <Cont.Provider value={one}>
+                   <Comp/>
+                <Cont.Provider/>
+=======
 				<Cont.Provider value={ {a:1}}>
 				<Comp />
 				</Cont.Provider >
+>>>>>>> 34ca3a5aa31969207514a09c4e3f9100b041a142
 
 
 			</div>

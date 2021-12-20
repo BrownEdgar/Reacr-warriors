@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import App from './Components/Georgi/components/axios/App'
-import App from './Components/Edgar/TASK/App'
+import App from './Components/Edgar/Test/App'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 

@@ -1,0 +1,29 @@
+.btn {
+	
+	padding: 0.5rem 1rem;
+	border-radius: 8px;
+	border:none;
+	width: 100%;
+ 
+}
+
+.btn.dark {
+	background-color: #333;
+	color: #f2f2f2;
+}
+.btn.light {
+	background-color: rgb(192, 192, 192);
+	color: #333;
+}
+.w-25{
+	width: 25% !important;
+}
+.w-50{
+	width: 50% !important;
+}
+.w-75{
+	width: 75% !important;
+}
+.w-100{
+	width: 100% !important;
+}
