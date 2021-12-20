@@ -1,65 +1,47 @@
 import React,{Component} from 'react'
 import "./App.css"
+import Persons from './Components/Persons'
 
-
-
-/* 
-function App() {
-
-  const arr = ['html', 'CSS', 'javaScript', 'React.js', 'ReactNative']
-
-  return (
-    <div className="container" style = {style.container}>
-      <h1 style = {style.h}>CSS in React.js</h1>
-      <img src = "./img/photo.jpg" />
-    </div>
-  );
-
-  
-} */
+/* 1. Կա զանգված մարդկանց տվյալներով։Պահել այն ստեյթի մեջ, փոխանցել այն մեկ ուրիշ կոմպոնենտի և նկարել էջում <li> թեգերի մեջ։
+ 2․ Հետո ամեն մի <li> թեգի կողքը ավելացնել "X" կոճակ,որը կջնջի համապատասխան <li> թեգը
+*/
 
  
-export default class App extends Component {
+class App extends Component {
 
   state = {
-    count: 0
-  }
 
-  handlerClick = () => {
-   
-    let count  = this.state.count
-
-    count += 1;
-
-    this.setState( {count} );
-  }
-
-  landlerClick = () => {
-    
-   let count = this.state.count;
-
-   count -= 1;
-
-   this.setState( {count} );
+    users: [ { id: 1, fullName: "Leanne Graham", username: "Bret", age: 36 },
+    { id: 2, fullName: "Jonathan Skyu", username: "Mike", age: 42 },
+    { id: 3, fullName: "Elizabeth Taylor", username: "Jess", age: 28 },
+    { id: 4, fullName: "Gary Oldsban", username: "Andrew", age: 31 } ],
 
   }
+  
+  deleterClick = () => {
 
-  bandlerClick = () => this.setState( {count: 0} ) 
+    let copy = [...this.state.users]
+
+    copy.pop();
+
+    this.setState( {users:copy} );
+     
+  }
 
   render () {
 
-    const {count} = this.state;
+  const {users} = this.state;
 
-    return (
+
+  return (
           <div>
-            <h1>hello</h1>
-            <h3>{count}</h3>
-           <button onClick = {this.handlerClick}>+</button>
-           <button onClick={this.landlerClick}>-</button>
-           <button onClick={this.bandlerClick}>reset</button>
+          <Persons data = {users} deleterClick = {this.deleterClick} /> 
           </div>
     );
 
-  }
+    }
 
-} ;
+};
+
+
+export default App
