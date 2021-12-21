@@ -1,47 +1,43 @@
 import React,{Component} from 'react'
 import "./App.css"
-import Persons from './Components/Persons'
+import List from './Components/List'
 
-/* 1. Կա զանգված մարդկանց տվյալներով։Պահել այն ստեյթի մեջ, փոխանցել այն մեկ ուրիշ կոմպոնենտի և նկարել էջում <li> թեգերի մեջ։
- 2․ Հետո ամեն մի <li> թեգի կողքը ավելացնել "X" կոճակ,որը կջնջի համապատասխան <li> թեգը
-*/
 
- 
 class App extends Component {
 
   state = {
 
-    users: [ { id: 1, fullName: "Leanne Graham", username: "Bret", age: 36 },
-    { id: 2, fullName: "Jonathan Skyu", username: "Mike", age: 42 },
-    { id: 3, fullName: "Elizabeth Taylor", username: "Jess", age: 28 },
-    { id: 4, fullName: "Gary Oldsban", username: "Andrew", age: 31 } ],
+    users: [ 
+          { id: 1, fullName: "Veliant", age: 30, salary:340_000 },
+          { id: 2, fullName: "Symon", age: 27, salary:140_000 },
+          { id: 3, fullName: "Rafael", age: 28, salary:200_000 },
+          { id: 4, fullName: "Jonathan", age: 31, salary:500_000 } ]
 
   }
-  
-  deleterClick = () => {
 
-    let copy = [...this.state.users]
+  deleteItem = (id) => {
+    
+    let users = [...this.state.users]
 
-    copy.pop();
+    users = users.filter( (elem) => elem.id !== id )
 
-    this.setState( {users:copy} );
-     
+    this.setState( {users} )
+  }
+ 
+  render() {
+
+    const {users} = this.state
+
+    return (
+      <div className='container'>
+        <List users = {users} deleteItem = {this.deleteItem} />
+      </div>
+    )
+
   }
 
-  render () {
-
-  const {users} = this.state;
-
-
-  return (
-          <div>
-          <Persons data = {users} deleterClick = {this.deleterClick} /> 
-          </div>
-    );
-
-    }
-
-};
+}
 
 
 export default App
+
