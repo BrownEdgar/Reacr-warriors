@@ -1,15 +1,41 @@
-import React from 'react'
-import "./App.css"
+import React, { useState } from 'react'
+import "./assets/sass/App.scss"
+import MainForm from './pages/MainForm'
 
-const style = { 
-	container: { color: "red", fontSize: "20px" },
-	p: {border:"5px solid red"}
- };
+
 export default function App() {
+	const [state, setstate] = useState({
+		name: {
+			value:"",
+			type: "text",
+			errorMessage: "name field cannot be blank.",
+			placeholder:"name"
+		},
+		email: {
+			value: "",
+			type: "email",
+			errorMessage: "email field cannot be blank.",
+			placeholder:"email",
+		},
+		message: {
+			value: "",
+			type: "",
+			errorMessage: "description field cannot be blank.",
+			placeholder:"dectination of job"
+		}
+	})
+	const handleChange = (e) => {
+		let copy = {...state};
+		copy[e.target.name].value = e.target.value;
+		setstate(copy)
+	}
+	const handleSubmit = (e) => {
+		console.log("ok");
+		e.preventDefault()
+	  }
 	return (
-		<div className="container" style={style.container}>
-			<p style={style.p}></p>
-			<h2>CSs in React.js</h2>
+		<div className="container" >
+			<MainForm handleSubmit={handleSubmit} handleChange={handleChange} state={state}/>
 		</div>
 	)
 }

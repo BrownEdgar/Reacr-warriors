@@ -1,0 +1,52 @@
+@import "./variables";
+@import "./colors";
+@import "./mixins";
+
+
+
+.flex {
+	display: flex;
+	justify-content: space-around;
+	min-height: 600px;
+	margin-top: 70px;
+	.form_wrapper {
+		padding: 1rem;
+		flex-basis: 30%;
+		text-align: center;
+		h1{
+			color: $white;
+			font-size: 4.5em;
+			font-weight: 600;
+		}
+		form {
+			background-color: rgba(0 0 0 /40%);
+			padding: 1rem 2rem;
+			width: 100%;
+			input{
+				width: 100%;
+				display: block;
+				height: 56px;
+				padding: 2rem;
+				border: none;
+				margin: 15px auto;
+				border-radius: 8px;
+			}
+			textarea{
+				resize: none;
+				width: 100%;
+				border: none;
+				margin: 15px auto;
+				border-radius: 8px;
+				padding:  2rem;
+			}
+			#send{
+				background-color: $btn_color;
+				color:$white;
+				cursor: pointer;
+				font-weight: 600;
+				font-size: 20px;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
