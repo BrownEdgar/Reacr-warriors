@@ -38,6 +38,3 @@ span{
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
-.input-field .prefix.active{
-	color:darkred !important;
-}

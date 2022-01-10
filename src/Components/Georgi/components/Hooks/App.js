@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './App.css'
 
 export default function App() {
-	const [state, setstate] = useState(['a', 'b', 'c', 'd',"e","f"])
+	const [state, setstate] = useState(['a', 'b', 'c', 'd'])
 	const [number, setnumber] = useState([1,2,3,4])
 
 	const deleteItem = () => {
@@ -21,7 +21,9 @@ export default function App() {
 
 	const multiplyItems = () => {
 		const newnumber = number
-		setnumber(newnumber.map((elem) => elem * 2))
+		return(
+				<h1>{setnumber(newnumber.map((elem) => elem * 2))}</h1>
+		)
 	}
 
 	const toLocalStorage = () => {
@@ -30,9 +32,8 @@ export default function App() {
 	}
 
 	const shufflelItems = () => {
-		const newsdeck = state.sort(() => Math.floor(Math.random() - 0.5));
-		console.log(newsdeck);
-		setstate([...newsdeck])
+		const newsdeck= state
+		return <h1>{setstate(newsdeck.sort(() => Math.floor(Math.random() - 0.5)))}</h1>  
 	}
 
 	return (

@@ -24,7 +24,7 @@ const map=()=>{
   }
 
 const local=()=>{
-   localStorage.setItem('arr',JSON.stringify(array))
+   localStorage.setItem('arr',array)
 }
 
 const c=()=>{
