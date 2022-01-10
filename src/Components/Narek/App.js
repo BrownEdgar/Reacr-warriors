@@ -1,29 +1,18 @@
-import React, {Component} from 'react'
-import './App.css';
+import React,{useState} from 'react'
 
-export default class App extends Component{
-state={
-  data:new Date().toLocaleTimeString()
+export default function App() {
 
+const [a,seta]=useState(['mek','erku','ereq'])
+console.log(a)
+
+const clic=()=>{
+  seta(a.concat(['as']))
 }
-start=()=>{
-setInterval(()=>{
-  this.setState({data:new Date().toLocaleTimeString()})
-},1000)
-   
-}
-stop=()=>{
-clearInterval()
-}
-render(){
   return (
-    <div className='count'>
-<h1>{this.state.data}</h1>
-<button onClick={this.start}>Start</button>
-<button onClick={this.stop}>Stop</button>
+    <div>
+      <h1>{a.join(" ")}</h1>
+      <button onClick={clic}>df</button>
     </div>
   )
 }
-}
-
 

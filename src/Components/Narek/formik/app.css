@@ -1,0 +1,28 @@
+body{
+    background-color: black;
+}
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    width: 20%;
+  }
+  input[type=email]{
+padding: 5px;
+    color:white;
+  }
+  input[type=password]{
+
+    color:white;
+  }
+  p{
+      color:brown;
+  }
+  button{
+      background-color: blue;
+      border: none;
+      color: white;
+      border-radius: 10%;
+      padding: 10px;
+  }
+  
