@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #1e272e;
+}
+
+.container {
+	max-width: 600px;
+	margin: 180px auto;
+	padding: 1rem 2rem;
+	border: 2px dashed #05c46b;
+	form {
+		.form-group {
+			width: 90%;
+			margin: 10px auto;
+			label {
+				margin: 8px 0px;
+				color: aliceblue;
+			}
+			input {
+				width: 100%;
+				padding: 0.5rem 1rem;
+				border-radius: 6px;
+				border: none;
+				&:focus {
+					outline: 1px solid #05c46b;
+				}
+			}
+			p {
+				color: orangered;
+			}
+		}
+		button {
+			width: 100%;
+			padding: 0.5rem 1rem;
+			background-color: #ff5252;
+			border: none;
+			color: aliceblue;
+			width: 90%;
+			display: block;
+			border-radius: 6px;
+			margin: 40px auto;
+			cursor:pointer;
+			&:disabled{
+				background-color: rgb(122, 122, 122);
+				cursor: not-allowed;
+			}
+		}
+	}
+}

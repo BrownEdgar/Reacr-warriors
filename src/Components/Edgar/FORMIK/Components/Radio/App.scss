@@ -1,0 +1,90 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #1e272e;
+	color:#f2f2f2;
+}
+
+.container {
+	max-width: 600px;
+	margin: 180px auto;
+	padding: 1rem 2rem;
+	border: 2px dashed #05c46b;
+	label {
+				margin: 8px 0px;
+				color: aliceblue;
+			}
+	form {
+		.form-group {
+			width: 90%;
+			margin: 10px auto;
+			
+			input {
+				width: 100%;
+				padding: 0.5rem 1rem;
+				border-radius: 6px;
+				border: none;
+				&:focus {
+					outline: 1px solid #05c46b;
+				}
+			}
+			textarea {
+				width: 100%;
+				resize: none;
+				height: 90px;
+			}
+			p {
+				color: orangered;
+			}
+		}
+		button {
+			width: 100%;
+			padding: 0.5rem 1rem;
+			background-color: #ff5252;
+			border: none;
+			color: aliceblue;
+			width: 90%;
+			display: block;
+			border-radius: 6px;
+			margin: 40px auto;
+		}
+	}
+}
+p {
+	color: orangered;
+}
+h4{
+	color: rgb(19, 125, 160);
+	font-weight: 200;
+	position: relative;
+
+	padding-bottom: 5px;
+	&::after{
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 30%;
+		height: 1px;
+		background-color: red;
+		
+	}
+
+}
+label{
+	display: block;
+}
+select {
+	outline: none;
+	padding: 0.2rem 0.5rem;
+	min-width: 150px;
+}
+input[type="checkbox"],
+input[type="radio"]{
+	margin-right: 8px !important;
+
+}
