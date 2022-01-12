@@ -1,11 +1,11 @@
 import React from 'react';
-import { Formik, useFormik, yupToFormErrors } from 'formik';
+import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import "./app.css";
 
 const validationSchema=Yup.object({
-email:Yup.string().email('invalide').required('required'),
-password:Yup.string().min(8).max(16).required('required').trim()
+email:Yup.string().email('invalide').required('required').trim(),
+password:Yup.string().min(8).max(16).required('required')
 })
 
 const initialValues={
@@ -26,11 +26,9 @@ initialValues:{
 email:'Narek-panosyan@mail.ru',
 password:''
 },
-
 onSubmit:value=>{
   console.log(value)
 },
-
 validate:value=>{
 let errors={}
 if(!formik.password){
@@ -52,15 +50,14 @@ return (
     <form  onSubmit={formik.handleSubmit }>
   
       <input type='email'
-        name='email'
+        name='email' 
         /*
         value={formik.values.email}
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         */
         {...formik.getFieldProps('email')} /><br />
-  {formik.errors.email && formik. 
-touched.email ?<p>{formik.errors.email }</p>:null}
+  {formik.errors.email && formik.touched.email ?<p>{formik.errors.email }</p>:null}
     
     <input type='password'
         name='password'

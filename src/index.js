@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './Components/Narek/formik/form';
+import App from './Components/Narek/formik/formik';
 import { BrowserRouter as Router } from 'react-router-dom'
 
 
