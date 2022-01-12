@@ -1,0 +1,19 @@
+span {
+	-webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: aqua;
+}
+
+div{
+	padding: 20px;
+}
+
+.listtt{
+	color: aqua;
+	-webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: black;
+}
+
+input{
+	color: white;
+}
+
