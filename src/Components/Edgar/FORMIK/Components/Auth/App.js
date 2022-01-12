@@ -1,16 +1,19 @@
-import React, { useState} from 'react'
+import React, { useState } from 'react'
 import "../../assets/scss/App.scss"
 import * as yup from 'yup'
 
-
 import { Formik, Form, Field, ErrorMessage } from 'formik'
+
 const API_KEY = process.env.REACT_APP_API_KEY;
 console.log(API_KEY);
+
 export default function App() {
-	const [state, setstate] = useState({})
+	const [state, setstate] = useState({});
+
 	const onSubmit = values => {
-		registerHandler(values);
-		setstate(values)
+		console.log("onSUbmit");
+		 registerHandler(values);
+		 setstate(values)
 	}
 	const initialValues = {
 		email: "nikogosjanedgar@gmail.com",
@@ -21,24 +24,26 @@ export default function App() {
 		password: yup.string().required("Required"),
 
 	})
-	const loginHandler = () => {
-		const data = { ...state, returnSecureToken: true };
+
+	function registerHandler(values) {
+		const data = { ...values, returnSecureToken:true};
 		console.log(data);
-		fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`, {
-			method: "POST",
-			body: JSON.stringify(data)
-		})
-			.then(response => console.log(response))
-			.catch(err => console.error(err))
-	}
-	const registerHandler = (values) => {
-		const data = { ...values, returnSecureToken:true}
 		fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`, {
 			method: "POST",
 			body: JSON.stringify(data)
 		})
-			.then(response => console.log(response))
-			.catch(err => console.error(err))
+		.then(response => console.log(response))
+		.catch(err => console.log(err))
+
+	}
+	function loginHandler() {
+		const data = { ...state, returnSecureToken: true };
+		fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`, {
+			method: "POST",
+			body: JSON.stringify(data)
+		})
+		.then(response => console.log(response))
+		.catch(err => console.log(err))
 	}
 	return (
 		<div className='container'>
@@ -48,6 +53,7 @@ export default function App() {
 				onSubmit={onSubmit}
 			>
 				{formik => {
+					console.log(formik);
 					return (
 						<Form >
 							<div className="form-group">
@@ -65,11 +71,14 @@ export default function App() {
 								<ErrorMessage name="password" component="p" />
 							</div>
 							<button
-								type="button"
+								type="submit"
 								id="login"
 								disabled={!formik.isValid}
-								onClick={loginHandler}
-							>Login</button>
+								onClick={() => {
+									setstate(formik.values);
+									loginHandler()
+								}}
+								>Login</button>
 							<button
 								type="submit"
 								id="Register"

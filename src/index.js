@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './Components/Edgar/image-gallery/start/App2'
+import App from './Components/Edgar/FORMIK/Components/Auth/App'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 
