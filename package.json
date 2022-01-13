@@ -15,16 +15,13 @@
     "react-router-dom": "^6.1.1",
     "react-scripts": "4.0.3",
     "rimraf": "^3.0.2",
-<<<<<<< HEAD
+
     "web-vitals": "^1.0.1",
-=======
     "sass": "^1.47.0",
     "web-vitals": "^1.0.1",
-<<<<<<< HEAD
-=======
+
+
     "formik": "^2.2.9",
->>>>>>> 5c92513b6ce25393ef3f0fe663f2ad09df916db3
->>>>>>> 16a1f928cc2c4414790f47994d09cba67d9db3d8
     "yup": "^0.32.11"
   },
   "scripts": {

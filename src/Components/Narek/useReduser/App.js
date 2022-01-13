@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-import React,{useReducer} from 'react'
-
-function reducer(state,action){
-    console.log(action)
-switch (action.type) {
-    case 'array':
-        console.log('array')
-        break;
-    case 'arr':
-         console.log('arr')
-         break;
-     default:
-        break;
-   }
-}
-export default function App() {
-    const [state, dispatch] = useReducer(reducer, [1,5,6,4,7,8]);
-    return (
-        <div>
-<button onClick={() => dispatch({type: 'array'})}></button>
-<button onClick={() => dispatch({type: 'arr'})}></button>    
-        </div>
-    )
-}
-=======
 import { useEffect, useReducer, useState } from "react";
 import "./app.css";
 
@@ -55,17 +29,17 @@ function res(state){
   return a
 }
 useEffect(()=>{
-return setc(c++)
+return setc(c+=1)
 },[state])
 
   return (
     <div className="App">
       <h1>{state}</h1>
-      <p>{c++}</p>
+      <p>{c}</p>
      <button onClick={()=>dispatch({type:'one'})}>sum</button>
      <button onClick={()=>dispatch({type:'two'})}>res</button>
 
     </div>
   );
 }
->>>>>>> 16a1f928cc2c4414790f47994d09cba67d9db3d8
+

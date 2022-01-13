@@ -19,7 +19,7 @@ minus=()=>{
 }
 clear=()=>{
   let c=this.state.count
-  c=""
+  c=0
   this.setState({count:c})
 }
 render(){
