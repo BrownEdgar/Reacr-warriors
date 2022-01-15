@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+import React,{useState} from 'react'
+
+export default function App() {
+
+const [a,seta]=useState(['mek','erku','ereq'])
+console.log(a)
+
+const clic=()=>{
+  seta(a.concat(['as']))
+}
+  return (
+    <div>
+      <h1>{a.join(" ")}</h1>
+      <button onClick={clic}>df</button>
+    </div>
+  )
+}
+=======
 import React, { Component } from 'react'
 import './App.css';
 
@@ -27,4 +46,5 @@ export default class App extends Component {
 	}
 }
 
+>>>>>>> 16a1f928cc2c4414790f47994d09cba67d9db3d8
 

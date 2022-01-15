@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "../../assets/scss/App.scss"
+import "../REG_LOG/App.scss"
 import * as yup from 'yup'
 
 import { Formik, Form, Field, ErrorMessage } from 'formik'
@@ -16,7 +16,7 @@ export default function App() {
 		 setstate(values)
 	}
 	const initialValues = {
-		email: "nikogosjanedgar@gmail.com",
+		email: "volodya-@bk.ru",
 		password: "",
 	}
 	const validationSchema = yup.object({
@@ -57,7 +57,7 @@ export default function App() {
 					return (
 						<Form >
 							<div className="form-group">
-								<label htmlFor="email">Name</label>
+								<label htmlFor="email">Email or phone number</label>
 								<Field type="text" id="email" name="email" />
 								<ErrorMessage name="email">
 									{(errMsg) => <div>
@@ -66,7 +66,7 @@ export default function App() {
 								</ErrorMessage>
 							</div>
 							<div className="form-group">
-								<label htmlFor="password">password</label>
+								<label htmlFor="password">Password</label>
 								<Field type="password" id="password" name="password" />
 								<ErrorMessage name="password" component="p" />
 							</div>
