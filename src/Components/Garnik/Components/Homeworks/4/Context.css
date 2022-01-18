@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color:bisque;
+}
+
+.menu {
+  margin: 0 auto;
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+.flex_item {
+  width: 25%;
+  padding: 1rem 2rem;
+  text-align: center;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+.header {
+  font-weight: 900;
+}
+
+.dishName {
+  color:green;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+  font-size: 1em;
+  padding: 7px 10px 10px 10px;
+  margin: 2px;
+  margin-top: 5px;
+  color:#282C34;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background-color: rgb(47, 255, 99);
+  transition: 0.2s;
+}
+.btn:focus {
+  background-color: rgb(47, 224, 255);
+}
+
+.dishViewer{
+  width: 25%;
+  padding:20px;
+}
+
+.dishViewer_header {
+  font-size: 1.2em;
+  font-weight: 900;
+  word-spacing: 5px;
+  letter-spacing: 3px;
+  color:tomato;
+  filter: drop-shadow(0px 0px 5px rgb(234, 255, 47) );
+}
+
+.dishViewer_content_dishName {
+  text-align: center;
+  font-weight: 900;
+  color:rgb(47, 95, 255);
+}
+
+.dishViewer_content {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  text-align:center;
+  background-color: white;
+  position: relative;
+}
+
+.btn_dishViewer_deleter {
+  position: absolute;
+  top:0;
+  right: 0;
+  transition: 0.2s;
+}
+.btn_dishViewer_deleter:hover{
+  background-color:red;
+  transition: 0.2s;
+}
