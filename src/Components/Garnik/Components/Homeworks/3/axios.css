@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color:bisque;
+}
+
+input {
+  padding: 10px;
+}
+
+input:focus{
+  border:5px solid grey;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+  font-size: 1.2em;
+  padding: 7px 10px 10px 10px;
+  margin: 2px;
+  margin-top: 5px;
+  color:#282C34;
+}
+
+.btn_success {
+  background-color: green;
+}
+
+.btn_changer {
+  background-color:yellow;
+}
+
+.btn_deleter {
+  background-color: red;
+}
+
+.btn_uptdeler {
+  background: rgb(207,201,3);
+  background: linear-gradient(90deg, rgba(207,201,3,1) 0%, rgba(207,205,3,1) 0%, rgba(207,54,3,1) 73%, rgba(207,3,3,1) 100%);
+}
+
+pre {
+  background-color: #333;
+  max-width: 1000px;
+  color: #f2f2f2;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+
