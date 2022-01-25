@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #1e272e;
+}
+
+.achq {
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  border-radius: 50%;
+  right: 10px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 180px auto;
+  padding: 1rem 2rem;
+  border: 2px dashed #05c46b;
+}
+
+.container form .form-group {
+  position: relative;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.container form .form-group label {
+  margin: 8px 0px;
+  color: aliceblue;
+}
+
+.container form .form-group input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+}
+
+.container form .form-group input:focus {
+  outline: 1px solid #05c46b;
+}
+
+.container form .form-group p {
+  color: orangered;
+}
+
+.container form .form-group textarea {
+  resize: none;
+  width: 100%;
+  display: block;
+}
+
+.container form button {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #ff5252;
+  border: none;
+  color: aliceblue;
+  width: 90%;
+  display: block;
+  border-radius: 6px;
+  margin: 40px auto;
+}
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,39 @@
+@mixin button($color){
+    background-color: $color;
+    border: none;
+    color: white;
+    border-radius: 15%;
+    margin: 5px;
+    padding:5px 10px 5px 10px;
+    cursor:pointer;
+}
+.text{
+    display: flex;
+     width: 100%;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+ span{
+   background-color: yellow;
+    }
+    .color{
+        box-shadow: 5px 5px 10px 8px black;
+       border-radius: 3%;
+        padding: 10px;
+        width: 35%;
+        color:white;
+        span{
+            background-color: rgb(209, 209, 63);
+        }
+        .one{
+         @include button(rgb(68, 57, 57))
+        }
+          .two{
+            @include button(blue)
+        }
+        .three{
+            @include button(yellowgreen)
+        }
+    }
+}
