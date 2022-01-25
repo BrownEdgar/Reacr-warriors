@@ -1,0 +1,29 @@
+body{
+    background-color: rosybrown;
+}
+
+div{
+    width: 700px;
+    height: 300px;   
+}
+
+ button{
+     background-color: rgb(255, 255, 255);
+     width: 80px;
+     height: 40px;
+     border-radius: 20px;
+     margin: 10px;
+ }
+
+ h1{
+     color: rgb(0, 0, 0);
+     font-size: 25px;
+     font-family: Arial, Helvetica, sans-serif;
+     margin: 20px 20px ;
+ }
+
+ h5{ color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px 20px ;
+}

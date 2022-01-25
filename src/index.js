@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './Components/Volodya/REG_LOG/App'
+import App from './Components/Volodya/Card/App'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 
