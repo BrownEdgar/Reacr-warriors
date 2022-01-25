@@ -3,26 +3,26 @@ import './App.css'
 
 export default function App() {
 	const [state, setstate] = useState(['a', 'b', 'c', 'd'])
-	const [number, setnumber] = useState([1,2,3,4])
+	const [number, setnumber] = useState([1, 2, 3, 4])
 
 	const deleteItem = () => {
 		const newstate = state
 		return (
-				<h1>{setstate(newstate.splice(Math.floor(Math.random() * newstate.length - 1), Math.floor(Math.random() * newstate.length)))}</h1>
+			<h1>{setstate(newstate.splice(Math.floor(Math.random() * newstate.length - 1), Math.floor(Math.random() * newstate.length)))}</h1>
 		)
 	}
 
 	const plusItems = () => {
 		const newnumber = number
 		return (
-					<h1>{setnumber(newnumber.reduce((a,b) => a + b ))}</h1>
+			<h1>{setnumber(newnumber.reduce((a, b) => a + b))}</h1>
 		)
 	}
 
 	const multiplyItems = () => {
 		const newnumber = number
-		return(
-				<h1>{setnumber(newnumber.map((elem) => elem * 2))}</h1>
+		return (
+			<h1>{setnumber(newnumber.map((elem) => elem * 2))}</h1>
 		)
 	}
 
@@ -32,8 +32,8 @@ export default function App() {
 	}
 
 	const shufflelItems = () => {
-		const newsdeck= state
-		return <h1>{setstate(newsdeck.sort(() => Math.floor(Math.random() - 0.5)))}</h1>  
+		const newsdeck = state
+		return <h1>{setstate(newsdeck.sort(() => Math.floor(Math.random() - 0.5)))}</h1>
 	}
 
 	return (

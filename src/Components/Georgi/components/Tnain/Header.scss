@@ -1,0 +1,68 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 200px;
+}
+
+span{
+    background-color: green;
+    color: white;
+    padding: 7px;
+}
+
+.text{
+    width: 700px;
+    height: 100px;
+    position: relative;
+    & h1{
+        position: absolute;
+        top: -60px;
+        right: -300px;
+    }
+}
+
+.container{
+    background-color: black;
+    width: 700px;
+    height: 300px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    color: white;
+    .text-holder{
+        margin: 0 auto;
+        width: 90%;
+        padding-top: 10px;
+    }
+    h1{
+        font-size: 2em;
+    }
+    p{
+        font-size: 1em;
+    }
+    .button-box{
+        width: 90%;
+        padding-left: 19px;
+        button{
+            color: white;
+            padding: 5px;
+            width: 70px;
+            height: 30px;
+            margin: 10px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .blackbutton{
+            background-color: grey;
+        }
+        .bluebutton{
+            background-color: blue;
+        }
+        .yellowbutton{
+            background-color: rgb(187, 187, 0);
+        }
+    }
+}
