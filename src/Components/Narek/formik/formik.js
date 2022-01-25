@@ -30,7 +30,7 @@ function registerHandler( values){
  
    fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`, {
 	 		method: "POST",
-	 		body: JSON.stringify(state)
+	 		body: JSON.stringify(data)
 		})
 	 		.then(response => console.log(response))
 	 		.catch(err => console.error(err))

@@ -25,11 +25,10 @@ const App = () => {
        <div style={{backgroundColor: bg}}>
           <h1>Background is {bg}</h1>
            <h1>React events(change background)</h1>
-           <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis perferendis quam iste eum dolores, nulla aliquid, ab enim natus, veritatis nesciunt voluptatibus suscipit animi est quisquam harum recusandae neque pariatur.</h5>
-           <button onClick={bkChange}>Gray</button>
-           <button onClick={blChange}>BLUE</button>
-           <button onClick={yeChange}>YELLOW</button>
-
+             <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis perferendis quam iste eum dolores, nulla aliquid, ab enim natus, veritatis nesciunt voluptatibus suscipit animi est quisquam harum recusandae neque pariatur.</h5>
+              <button onClick={bkChange}>Gray</button>
+              <button onClick={blChange}>BLUE</button>
+              <button onClick={yeChange}>YELLOW</button>
        </div>
    )
 }
