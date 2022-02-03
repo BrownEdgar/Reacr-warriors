@@ -1,0 +1,27 @@
+#List {
+    width: 80%;
+    margin-left: 45px;
+    overflow: hidden;
+    list-style-type: none;
+}
+#List li {
+    border: 1px solid rgb(123, 120, 126);
+    margin-bottom: 20px;
+    padding: 0.5rem;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#List li i {
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#List li i:hover {
+    background-color: darkred;
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
+

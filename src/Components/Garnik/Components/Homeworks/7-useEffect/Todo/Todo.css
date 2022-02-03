@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color:#282C34;
+}
+.myContainer{
+    margin:0 auto;
+    margin-top: 10px;
+    width: 700px;
+}
+
+

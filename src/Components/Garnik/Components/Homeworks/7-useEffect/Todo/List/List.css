@@ -1,0 +1,40 @@
+.collection {
+    border: none;
+   
+}
+.collection-header{
+   text-align: center;
+   margin-bottom: 50px;
+   letter-spacing: 8px;
+   filter: drop-shadow(0px 0px 10px white );
+}
+.collection .collection-item {
+    margin: 0 auto;
+    width: 620px;
+    margin-bottom: 55px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow:0px 0px 10px 10px black,0px 0px 15px 15px greenyellow;
+/*     overflow-wrap:break-word;
+ */    
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:8px;
+    font-size: 18px;
+}
+li i {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 3px;
+    color:#282C34;
+    cursor: pointer;
+    transition: 0.3s;
+}
+li i:hover {
+    background-color:#282C34;
+    color: rgba(255, 0, 0, 0.733);
+    transform: translateY(-3px);
+    transition: 0.3s;
+}

@@ -1,0 +1,12 @@
+form {
+    color: white;
+}
+input{
+    color:white;
+}
+.input-field .prefix.active {
+    color:greenyellow;
+}
+.row {
+    margin-bottom:0;
+}
