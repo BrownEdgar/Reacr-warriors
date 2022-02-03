@@ -16,11 +16,9 @@ const [interval,setMyInterval] = useState(); // ստեղծում ենք նոր �
   // կանչում ենք setInterval-(որը 1վարկյանը մեկ կրկնում է կոդը),այսինքն ամենք վարկյանը մեկ նկարում ենք state-ը
 
     setMyInterval(setInterval(() => {
-
       setState({
         time: new Date().toLocaleTimeString()
       })
-
     }, 1000))
   }
 

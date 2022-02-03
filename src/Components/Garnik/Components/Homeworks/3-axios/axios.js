@@ -6,8 +6,10 @@ import axios from 'axios'
 
 //1.ջնջել նշված id-ով user-ը state-ից 
 
-//ես Խնդրի վերաբերյալ միքիչ հարցեր կան                                                              
+//ես Խնդրի վերաբերյալ միքիչ հարցեր կան      
 
+
+// Function component Ogtagorci
  class App extends Component {
 
  state = {
@@ -15,15 +17,14 @@ import axios from 'axios'
       value:''
 }
 
-getData = () => {
+ getData = () => {
   let {value} = this.state
   axios (`https://jsonplaceholder.typicode.com/todos/?_limit=${value}`)
   .then(newData => {
-      this.setState( {data:newData.data} )
+    //   this.setState( {data:newData.data} ) // Petq chi estex stateum pahel heto stugum ane;
       if(newData.status === 200) {
-         let {data} = this.state
-         data = [...data,...newData];
-         this.setState({data})
+		  this.setState({ data: newData.data })
+
       }
   }).catch( err => {
      this.setState({err:'error'});
