@@ -1,9 +1,19 @@
-import {useState} from "react"
+import {useState,useEffect,useRef} from "react"
 import "./App.css";
+import audio from "./NEFFEX - Destiny.mp3"
+
 
 export default function App() {
   const [text,settext]=useState([])
 
+  const ref=useRef(null)
+
+/*
+const pause=()=>{
+ref.current.pause();
+console.log(4)
+}
+*/
   const abc=(e)=>{
     e.preventDefault()
     t(e.target[0].value)
@@ -21,8 +31,14 @@ export default function App() {
     a.splice(id,1)
     settext(a)
   }
+
+  useEffect(()=>{
+    ref.current.play()
+  
+  },[abc]);
 return (
 <div className="App">
+  <audio src={audio}  ref={ref}/>
   <form onSubmit={abc}>
     <input type='text' required/>
  </form>

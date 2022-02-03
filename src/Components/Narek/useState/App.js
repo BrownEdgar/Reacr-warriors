@@ -6,7 +6,7 @@ export default function App() {
   const arr=[1,2,45,65,98,77,32,5]
 
   const [array,setarray]=useState(arr)
-  const [a,seta]=useState(arr)
+  const [a,seta]=useState()
 
  const one=()=>{
   let a=array.map((elem,index)=>elem*2)

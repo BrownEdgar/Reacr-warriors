@@ -29,7 +29,8 @@ function res(state){
   return a
 }
 useEffect(()=>{
-return setc(c+=1)
+ setc(c+=1)
+
 },[state])
 
   return (

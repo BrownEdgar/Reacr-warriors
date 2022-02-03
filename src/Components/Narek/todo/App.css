@@ -14,12 +14,13 @@ body{
       overflow: hidden;
     }
     .App p{
- 
+ text-align: center;
+ font-size: 1.5em;
       border:2px solid black;
-      padding:15px 0 0 5px;
-      color:rgb(0, 0, 0);
+      padding:15px 0 0 15px;
+      color:rgb(39, 4, 4);
       font-weight: 700;
-      width: 30%;
+      width: 25%;
     
     }
     .clear {
