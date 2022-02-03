@@ -26,8 +26,9 @@ function App() {
         setState(newState);
     }
     const deleteElement = () => {
+		// Binaty search estex petq chi ogtagorcel, zangvacy misht chi sortavorvac, Filtrov kpoxes
         let start = 0;
-        let end = newState.length - 1
+        let end = newState.length - 1;
         let itemIndex =  Math.trunc(Math.random() * (end - start) + start)
         newState = newState.filter( item => item !== newState[itemIndex])
         if(newState.length === 0) {
@@ -42,6 +43,7 @@ function App() {
     }
     const multiplyTwo = () => {
         let emptySum = []
+		//Estex map-y jisht kliner aveli
         newState.forEach( (elem,index) => emptySum.push(elem * 2))
         let sum = emptySum.join(", ")
         setSum(sum);
@@ -59,11 +61,14 @@ function App() {
         localStorage.setItem("my state",state)
     }
     const readeLocalStorage = () => {
-        let localState = localStorage.getItem("my state")
-        alert(localState)
-        if (localState === null) {
-        alert("sorry storage cleared,localStorage is equal to: null")
-        }
+		let localState = localStorage.getItem("my state")
+		//es stugumy skzbica petq anel
+		if (localState === null) {
+			alert("sorry storage cleared,localStorage is equal to: null")
+		}else{
+			alert(localState)
+		}
+		
     }
     const clearLocalStorage = () => {
        /*  localStorage.removeItem('my state') */
