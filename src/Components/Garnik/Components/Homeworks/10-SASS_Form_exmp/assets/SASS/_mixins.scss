@@ -1,0 +1,6 @@
+@mixin bg_rools($image,$size) {
+     background-image:url($image);
+     background-size:$size;
+     background-position: center;
+     background-repeat: no-repeat;
+}

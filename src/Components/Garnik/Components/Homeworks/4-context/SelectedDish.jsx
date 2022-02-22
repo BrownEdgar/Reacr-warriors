@@ -1,5 +1,5 @@
 import React from 'react'
-import { viewDish } from '../../../App' //context-ը պետք է import արվի դեպի այն ֆայլ որտեղ որ
+import { viewDish } from './Context' //context-ը պետք է import արվի դեպի այն ֆայլ որտեղ որ
 //գտնվում է Consumer-ը 
 
 

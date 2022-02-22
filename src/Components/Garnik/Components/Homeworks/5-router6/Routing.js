@@ -8,9 +8,9 @@ import Error404 from './pages/Error404';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
 
-// Fayli u fwunkciayi anwunnery piti nuyny lini misht
-//BrowserRouter stex petq chi inqy index.js-wum miacaca arden
-function App() {
+// + Fayli u fwunkciayi anwunnery piti nuyny lini misht
+//BrowserRouter stex petq chi inqy index.js-wum miacaca arden - ?
+function Routing() {
 
   return (
       <div className='center-align'>
@@ -30,4 +30,4 @@ function App() {
 
 }
 
-export default App
+export default Routing;
